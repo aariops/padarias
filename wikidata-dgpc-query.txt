@@ -1,0 +1,19 @@
+#Património Cultural em Portugal
+#defaultView:Map
+SELECT ?item ?itemLabel ?coords ?image ?dgpcid WHERE {
+  ?item (wdt:P31/(wdt:P279*)) wd:Q210272; #património cultural
+    wdt:P17 wd:Q45; #em Portugal
+    wdt:P625 ?coords; #coordenadas para mapa
+    OPTIONAL { ?item wdt:P1702 ?dgpcid . } #id da DGPC opcional
+    OPTIONAL { ?item wdt:P18 ?image . } #imagem opcional
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "pt". }
+}
+
+
+
+
+Query: https://query.wikidata.org/#%23Patrim%C3%B3nio%20Cultural%20em%20Portugal%0A%23defaultView%3AMap%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Fcoords%20%3Fimage%20%3Fdgpcid%20WHERE%20%7B%0A%20%20%3Fitem%20%28wdt%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ210272%3B%20%23patrim%C3%B3nio%20cultural%0A%20%20%20%20wdt%3AP17%20wd%3AQ45%3B%20%23em%20Portugal%0A%20%20%20%20wdt%3AP625%20%3Fcoords%3B%20%23coordenadas%20para%20mapa%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1702%20%3Fdgpcid%20.%20%7D%20%23id%20da%20DGPC%20opcional%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP18%20%3Fimage%20.%20%7D%20%23imagem%20opcional%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22pt%22.%20%7D%0A%7D
+
+Resultado: https://w.wiki/RnL
+
+Embed: <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23Patrim%C3%B3nio%20Cultural%20em%20Portugal%0A%23defaultView%3AMap%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Fcoords%20%3Fimage%20%3Fdgpcid%20WHERE%20%7B%0A%20%20%3Fitem%20%28wdt%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ210272%3B%20%23patrim%C3%B3nio%20cultural%0A%20%20%20%20wdt%3AP17%20wd%3AQ45%3B%20%23em%20Portugal%0A%20%20%20%20wdt%3AP625%20%3Fcoords%3B%20%23coordenadas%20para%20mapa%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1702%20%3Fdgpcid%20.%20%7D%20%23id%20da%20DGPC%20opcional%0A%20%20%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP18%20%3Fimage%20.%20%7D%20%23imagem%20opcional%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22pt%22.%20%7D%0A%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups" ></iframe>
